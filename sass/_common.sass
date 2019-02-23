@@ -1,0 +1,82 @@
+::selection
+  background: rgba(0,0,0,.06)
+
+::-moz-selection
+  background: rgba(0,0,0,.06)
+
+.text-light
+  ::selection
+    background: rgba(255,255,255,.15)
+    color: lighten($primary,20%)
+
+.text-light
+  ::-moz-selection
+    background: rgba(255,255,255,.15)
+    color: lighten($primary,20%)
+
+a,
+button
+  &:focus,
+  &.focus
+    box-shadow: none !important
+    outline: none !important
+
+.btn
+  +sm-down
+    display: block
+    padding: .5rem 2rem
+    font-weight: 600
+
+.container
+  +xs-only
+    max-width: calc(100% - 24px)
+  +md-only
+    max-width: 700px
+
+.row
+  &.xs-gutters
+    margin-right: -2px
+    margin-left: -2px
+    > .col,
+    > [class*="col-"]
+      padding-right: 2px
+      padding-left: 2px
+
+// customize margin
+.mb-c
+  margin-bottom: 2rem
+  +md-up
+    margin-bottom: 3rem
+
+// customize shadow
+img.shadow-c
+  box-shadow: $box-shadow
+  +md-up
+    box-shadow: $box-shadow-lg
+
+.divider
+  width: 30px
+  height: 3px
+  margin: 2rem auto 2rem
+  background: darken($light,10%)
+  border-radius: 3px
+  +md-up
+    margin: 4rem auto 4rem
+
+#map
+  height: 300px
+  overflow: hidden
+
+footer
+  width: 100%
+  padding-top: 4rem
+  padding-bottom: 4rem
+  font-size: 80%
+  h4
+    margin-bottom: 0
+  p
+    line-height: 1.9
+  a,
+  a:hover,
+  a:visited
+    color: inherit

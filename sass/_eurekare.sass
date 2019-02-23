@@ -1,0 +1,258 @@
+$border-color: darken($light,6%)
+
+.bg-pageHeader
+  background: url(/dist/images/kv-home-bg.jpg) center center no-repeat
+  background-size: cover
+.bg-service
+  background: #f5eae7
+.bg-overview
+  background: #e7eef5
+.bg-security
+  background: #e7eef5
+.bg-benefit
+  +linear-gradient--leftTopRightBottom(#e1f3e1,#d3f3ff)
+
+.pageHeader
+  // horizontal (home)
+  &--h
+    +sm-down
+      min-height: 100vh
+    +md-up
+      padding-top: 7rem
+      text-align: center
+    +lg-up
+      text-align: left
+    .pageHeader__group
+      margin-top: 2rem
+      +lg-up
+        margin-top: -3rem
+  // vertical (solutions)
+  &--v
+    padding-top: 5rem
+    +md-up
+      padding-top: 7rem
+      text-align: center
+    +lg-up
+      padding-top: 10rem
+  &__group
+    &__heading
+      margin-bottom: .5rem
+      +lg-up
+        font-weight: 400
+    &__subheading
+      margin-bottom: 1.2rem
+      font-size: $font-size-base
+      line-height: $line-height-base
+      font-weight: 400
+      opacity: .76
+
+.serviceDetail
+  padding-top: 5rem
+  padding-bottom: 5rem
+  +md-up
+    padding-top: 6rem
+    padding-bottom: 6rem
+  +lg-up
+    padding-top: 9rem
+    padding-bottom: 9rem
+  &--left
+    text-align: left
+  &--center
+    +md-up
+      text-align: center
+  &__subheading
+    display: inline-block
+    padding-bottom: .3rem
+    margin-bottom: 1.5rem
+    font-weight: 400
+    border-bottom: 1px solid
+  &__heading
+    margin-bottom: 1rem
+    &--single
+      margin-bottom: 2rem
+      font-size: $h3-font-size * .9
+      +lg-up
+        font-size: $h3-font-size-lg * .9
+  &__smallCard
+    padding: 2.2rem 1rem 1.8rem
+    margin-bottom: 1rem
+    text-align: center
+    +md-up
+      padding: 3rem 2rem 2.5rem
+    p
+      line-height: 1.6
+      +md-down
+        font-weight: 600
+    i
+      width: 90px
+      height: 90px
+      margin: 0 auto 1rem
+      font-size: 2.3rem
+      line-height: 90px
+      border-radius: 90px
+      +md-up
+        width: 110px
+        height: 110px
+        margin-bottom: 1.5rem
+        font-size: 2.5rem
+        line-height: 110px
+        border-radius: 110px
+        transition: all .3s ease-in-out
+    &--light
+      border: 1px solid $border-color
+      border-radius: $border-radius
+      p
+        color: $primary
+      i
+        color: $primary
+        background: transparent
+        border: 2px solid $primary
+      +lg-up
+        transition: all .5s ease-in-out
+        &:hover
+          background: $white
+          border-color: $white
+          box-shadow: 0 0 30px rgba(0,0,0,.04)
+          i
+            color: $white
+            background: $primary
+            border: 2px solid $primary
+  &__fluidDescription
+    max-width: 92%
+    margin: 5rem auto
+    +sm-up
+      max-width: 470px
+    +md-up
+      max-width: 580px
+      margin: 6rem auto
+      text-align: center
+    +lg-up
+      max-width: 75%
+      margin: 5rem auto
+      text-align: left
+    ul
+      margin-left: -22px
+  &__logo
+    display: block
+    +sm-down
+      margin-top: .8rem
+      margin-bottom: .8rem
+      overflow: hidden
+      border: 1px solid $border-color
+  // 以下還沒
+  &__largeCard
+    height: 100%
+    padding: 2rem 1rem 1rem
+    background: $white
+    +md-up
+      padding: 3rem 1rem 1rem
+    +lg-up
+      padding: 4rem 2rem 2rem
+    &--host
+      border: 1px solid rgba($success,.3)
+      +sm-down
+        margin-bottom: 1rem
+    &--members
+      border: 1px solid rgba($primary,.3)
+    &__heading
+      margin-bottom: 1rem
+      font-weight: 600
+      text-align: center
+  &__entry
+    padding: 4rem .8rem
+    +lg-up
+      padding: 6rem .8rem
+    h3
+      font-weight: 400
+      +lg-up
+        font-size: 1.8rem
+
+.serviceImg
+  &__scenario
+    min-height: 230px
+    +sm-up
+      min-height: 360px
+    +md-up
+      min-height: 440px
+    +lg-up
+      min-height: 600px
+    &--service
+      background: url('../images/scenario/scenario-service.jpg') center center no-repeat
+      background-size: cover
+      +lg-up
+        background: url('../images/scenario/scenario-service.jpg') left center no-repeat
+        background-size: cover
+    &--overview
+      background: url('../images/scenario/scenario-overview.jpg') center center no-repeat
+      background-size: cover
+      +lg-up
+        background: url('../images/scenario/scenario-overview.jpg') right center no-repeat
+        background-size: cover
+    &--security
+      background: url('../images/scenario/scenario-security.jpg') center center no-repeat
+      background-size: cover
+      +lg-up
+        background: url('../images/scenario/scenario-security.jpg') left center no-repeat
+        background-size: cover
+  &__companyProfile
+    overflow: hidden
+    +md-down
+      height: 28vh
+      img
+        margin-top: -50%
+
+.listGroup
+  &__list
+    &:first-child
+      border-top: 1px solid $border-color
+    .card-header
+      padding: 0
+      background: $white
+      border-color: $border-color
+      border-radius: 0
+      a
+        display: block
+        padding: 1rem .5rem .75rem
+        cursor: pointer
+        +md-up
+          padding: 1.25rem 1.25rem .9rem
+        span
+          margin-bottom: .2rem
+          font-size: .9rem
+          font-weight: 600
+          color: $primary
+          +md-up
+            margin-bottom: 0
+    .collapse
+      border-bottom: 1px solid $border-color
+    .card-body
+      background: $light
+
+// 改色待修
+.icon
+  position: fixed
+  z-index: 1021
+  display: none
+  width: 60px
+  height: 60px
+  padding: 20px
+  color: $dark !important
+  cursor: pointer
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20px" height="20px"><g><path d="M17.317,6.428125 C17.3095,6.420625 17.2995,6.418125 17.292,6.410625 L17.2945,6.406875 L10.42075,0.156875 L10.417,0.161875 C10.1795,-0.054375 9.82075,-0.054375 9.58325,0.161875 L9.5795,0.156875 L2.7045,6.406875 L2.70825,6.411875 C2.70075,6.418125 2.69075,6.420625 2.68325,6.428125 C2.4395,6.671875 2.4395,7.068125 2.68325,7.311875 C2.9195,7.548125 3.297,7.550625 3.542,7.328125 L3.54575,7.333125 L9.3745,2.033125 L9.3745,19.370625 C9.3745,19.715625 9.6545,19.995625 9.9995,19.995625 C10.34575,19.995625 10.6245,19.715625 10.6245,19.370625 L10.6245,2.033125 L16.4545,7.333125 L16.45825,7.329375 C16.7045,7.550625 17.08075,7.548125 17.317,7.311875 C17.56075,7.068125 17.56075,6.671875 17.317,6.428125"></path></g></svg>') center center no-repeat
+  +md-up
+    width: 100px
+    height: 100px
+    padding: 40px
+  svg
+    vertical-align: top
+    transition: all .2s linear
+    fill: currentColor
+  &:hover
+    svg
+      +transform(scale(1.25))
+  &__goTop
+    right: 0
+    bottom: 0
+
+// Bootstrap and its default variables
+// @import "bootstrap/bootstrap"

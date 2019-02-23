@@ -1,0 +1,46 @@
+p
+  &:last-child
+    margin-bottom: 0
+
+h1, .h1
+  +md-up
+    font-size: $h1-font-size-md
+  +lg-up
+    font-size: $h1-font-size-lg
+
+h3, .h3
+  +lg-up
+    font-size: $h3-font-size-lg
+
+p.article
+  &.role
+    padding-left: 1rem
+    border-left: 2px solid
+    span
+      font-weight: 600
+    &--center
+      +md-up
+        padding-left: 0
+        text-align: center
+        border: 0
+  a
+    font-weight: 500
+    border-bottom: 1px solid transparent
+    transition: all .2s linear
+    &:hover
+      text-decoration: none
+      border-bottom: 1px solid
+
+h4.article
+  // exception
+  margin-bottom: .8rem
+  line-height: 1.36
+
+ul.article
+  li
+    line-height: $line-height-base * .95
+    +lg-up
+      line-height: $line-height-lg * .95
+
+small
+  margin-top: .5rem

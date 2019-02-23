@@ -1,0 +1,71 @@
+// Responsive breakpoints
+// https://getbootstrap.com/docs/4.1/layout/overview
+// Default mixin: media-breakpoint-up(sm)
+// Custom mixin: sm-up
+
+// Small devices (landscape phones, 576px and up)
+@mixin sm-up
+  @media (min-width: 576px)
+    @content
+
+// Medium devices (tablets, 768px and up)
+@mixin md-up
+  @media (min-width: 768px)
+    @content
+
+// Large devices (desktops, 992px and up)
+@mixin lg-up
+  @media (min-width: 992px)
+    @content
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin xl-up
+  @media (min-width: 1200px)
+    @content
+
+// ------
+// Extra small devices (portrait phones, less than 576px)
+@mixin xs-down
+  @media (max-width: 575.98px)
+    @content
+
+// Small devices (landscape phones, less than 768px)
+@mixin sm-down
+  @media (max-width: 767.98px)
+    @content
+
+// Medium devices (tablets, less than 992px)
+@mixin md-down
+  @media (max-width: 991.98px)
+    @content
+
+// Large devices (desktops, less than 1200px)
+@mixin lg-down
+  @media (max-width: 1199.98px)
+    @content
+
+// ------
+// Extra small devices (portrait phones, less than 576px)
+@mixin xs-only
+  @media (max-width: 575.98px)
+    @content
+
+// Small devices (landscape phones, 576px and up)
+@mixin sm-only
+  @media (min-width: 576px) and (max-width: 767.98px)
+    @content
+
+// Medium devices (tablets, 768px and up)
+@mixin md-only
+  @media (min-width: 768px) and (max-width: 991.98px)
+    @content
+
+// Large devices (desktops, 992px and up)
+@mixin lg-only
+  @media (min-width: 992px) and (max-width: 1199.98px)
+    @content
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin xl-only
+  @media (min-width: 1200px)
+    @content

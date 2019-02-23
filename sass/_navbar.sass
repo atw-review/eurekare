@@ -1,0 +1,59 @@
+// xs, sm, md: collapse
+// lg, xl:expand
+
+.navbar
+  transition: all .4s ease
+  +sm-down
+    padding: 8px 0
+    background: $white
+  +md-only
+    padding: 10px
+    background: $white
+  +lg-up
+    padding: 1.5rem
+  &.scrolled-nav
+    background: $white
+    box-shadow: 0 0 30px rgba(0,0,0,.12)
+    +lg-up
+      padding: .5rem 1.5rem
+      box-shadow: 0 0 40px rgba(0,0,0,.12)
+
+.navbar-brand
+  +md-down
+    height: 38px
+    margin-left: 8px
+  +lg-up
+    height: 42px
+  img
+    +md-down
+      width: 180px
+      height: 43px
+    +lg-up
+      width: 220px
+      height: 52px
+
+.navbar-toggler
+  padding: 0
+
+.navbar-toggler-icon
+  width: 44px
+  height: 44px
+  opacity: .75
+
+.navbar-collapse
+  +md-down
+    padding: 2rem 12px 4rem
+    text-align: center
+  .nav-link
+    +md-down
+      padding-top: .8rem
+      padding-bottom: .8rem
+    +lg-up
+      font-size: $font-size-base * .9
+  .btn
+    +md-down
+      display: block
+      margin-top: 1rem
+    +lg-up
+      margin-left: .8rem
+      font-size: $font-size-base * .9

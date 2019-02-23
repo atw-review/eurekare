@@ -1,0 +1,28 @@
+$border-color: darken($gray,5%)
+
+form
+  label
+    position: absolute
+    font-size: .9rem
+    font-weight: 400
+    &::after
+      content: "*"
+      margin-left: .2rem
+      font-size: .8rem
+      color: $danger
+  input.form-control,
+  select.form-control,
+  textarea.form-control
+    padding: 1.6rem 0 .6rem
+    border-bottom: 1px solid $border-color
+    border-radius: 0
+    &:focus
+      border-color: $primary
+    // +input-placeholder
+      // font-weight: 300
+      // color: $gray-400
+  select.form-control
+    height: 70px
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
